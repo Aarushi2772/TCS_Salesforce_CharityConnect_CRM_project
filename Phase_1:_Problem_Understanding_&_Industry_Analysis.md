@@ -1,6 +1,6 @@
-# CharityConnect CRM – Donor Transparency & Campaign Management System  
+# CharityConnect CRM – Donor Transparency & Engagement Platform
 
-## Phase 1: Problem Understanding & Industry Analysis  
+## Phase 1: Problem Understanding & Industry Analysis
 
 **Industry:** Non-Profit / Charity (Crowdfunding & Donations)  
 **Project Type:** Salesforce CRM Implementation (Admin + Developer)  
@@ -8,93 +8,109 @@
 
 ---
 
-## Problem Statement  
+## Problem Statement
 
-Non-profit organizations often struggle to manage donations, campaigns, and donor trust due to:  
-- Scattered records maintained in Excel/Google Sheets.  
-- Lack of transparency on how donations are spent.  
-- Difficulty in tracking donor engagement and recurring contributions.  
-- Manual effort required to generate impact reports.  
+Non-profits struggle to build trust and engage donors due to:
 
-This leads to donor mistrust, low engagement, and inefficiency in managing campaigns.  
+* Scattered donation records in Excel/Sheets.  
+* Limited visibility into how donations are utilized.  
+* No reward system for recurring or loyal donors.  
+* Manual effort in sending updates, receipts, and impact reports.  
 
----
-
-## Goal  
-
-Implement a Salesforce CRM that:  
-- Centralizes donor, campaign, and beneficiary data.  
-- Automates donation tracking, acknowledgements, and reminders.  
-- Provides transparency by mapping donations → beneficiaries → impact reports.  
-- Offers dashboards and reports for real-time NGO performance insights.  
+This leads to **low donor retention, inefficiency, and declining trust**.  
 
 ---
 
-## Requirement Gathering  
+## Goal
 
-### Business Needs  
-- A single platform to manage donors, donations, campaigns, and beneficiaries.  
-- Automated thank-you emails and donation receipts.  
-- Transparency for donors to view exact impact of their contributions.  
-- Dashboards for NGO staff to monitor fundraising performance.  
+Develop a Salesforce-based platform that:
 
-### Functional Requirements  
-- **Donor Object:** Capture donor details, donation history, preferences.  
-- **Campaign Object:** Fundraising goals, target amount, duration, progress tracking.  
-- **Beneficiary Object:** Individuals/communities supported by donations.  
-- **Donation Object:** Links Donor → Campaign → Beneficiary.  
-- **Automation:** Email/SMS thank-you notes, reminders for recurring donors.  
-- **Reports:** Campaign progress, donor engagement trends, beneficiary impact.  
-
-### Non-Functional Requirements  
-- Mobile-friendly via Salesforce Mobile App for field workers.  
-- Role-based access (Donor vs NGO Staff vs Admin).  
-- Secure handling of donor data and financial records.  
-- Scalable for thousands of donors and campaigns.  
+* Centralizes donors, donations, campaigns, and beneficiaries.  
+* Provides **real-time donation tracking and impact reports**.  
+* Introduces **innovative engagement features** (Smart Cart, Loyalty Points, Badges, Forecasting).  
+* Automates thank-you emails, festive donation drives, and reminders.  
+* Enhances transparency through dashboards and donor profiles.  
 
 ---
 
-##  Stakeholder Analysis  
+## Requirement Gathering
 
-| Stakeholder   | Needs / Responsibilities |
-|---------------|---------------------------|
-| Donors        | Donate easily, receive acknowledgments, view transparency dashboard showing fund usage. |
-| NGO Staff     | Create/manage campaigns, track donations, allocate funds to beneficiaries, send updates. |
-| Beneficiaries | Receive funds/support, linked to donor campaigns, provide success stories. |
-| Admin         | Setup org, users, profiles, permissions, ensure compliance and security. |
+### Business Needs
 
----
+* Centralized platform for NGO staff and donors.  
+* Automated donation tracking + communication.  
+* Gamification features to retain donor interest.  
+* Impact-driven dashboards for staff and donors.  
 
-##  Business Process Mapping  
+### Functional Requirements
 
-### Current Manual Process  
-- Donations tracked in Excel with limited visibility.  
-- Donors manually informed via email/WhatsApp after contributions.  
-- Campaign progress updated monthly → delays in transparency.  
-- Impact reports created manually, often inaccurate or delayed.  
+* **Donor Object** → details, donation history, loyalty points.  
+* **Campaign Object** → fundraising goals, progress.  
+* **Beneficiary Object** → supported communities/individuals.  
+* **Donation Object** → links Donor → Campaign → Beneficiary.  
+* **Smart Donor Cart** → select multiple campaigns, auto-total.  
+* **Donor Loyalty Points & Badges** → points for each donation, auto-badges via automation.  
+* **Impact Forecasting** → formulas & dashboard to show future impact.  
+* **Festive Campaign Triggers** → seasonal auto-reminders.  
 
-### Proposed Salesforce Process  
-1. Donor registers → donation captured in Salesforce.  
-2. Donation linked automatically to a campaign and mapped to beneficiaries.  
-3. Auto-generated thank-you email & receipt sent instantly.  
-4. Flow sends reminder for recurring donations.  
-5. NGO staff update beneficiary progress (photos, stories, fund usage).  
-6. Donors log in to Donor Portal (LWC) → view how their funds are used.  
-7. Dashboards auto-refresh → showing live campaign progress and donor engagement.  
+### Non-Functional Requirements
 
----
-
-##  Industry-Specific Use Cases  
-- **Donation Transparency Dashboard:** Donors see impact → funds allocated to specific beneficiaries.  
-- **Recurring Donation Automation:** Monthly/annual contribution reminders.  
-- **Impact Storytelling:** NGOs upload beneficiary stories visible to donors.  
-- **Gamification of Giving:** Donor leaderboards based on contributions.  
-- **Multi-Campaign Support:** Donors can contribute to multiple causes.  
+* Mobile-friendly via Salesforce app.  
+* Role-based access (Donor, NGO Staff, Admin).  
+* Scalable for thousands of donors.  
+* Easy UI using Lightning App Builder + LWCs.  
 
 ---
 
-## AppExchange Exploration  
-- **Nonprofit Success Pack (NPSP):** Prebuilt NGO/donation management features.  
-- **Conga Composer:** Auto-generate donor receipts and certificates.  
-- **FormAssembly:** Custom donation forms integration.  
-- **SurveyMonkey:** Collect donor feedback and satisfaction surveys.
+## Stakeholder Analysis
+
+| Stakeholder   | Needs / Responsibilities                                                                     |
+| ------------- | -------------------------------------------------------------------------------------------- |
+| Donors        | Donate easily, see real-time impact, earn rewards (points & badges), forecast future impact. |
+| NGO Staff     | Create/manage campaigns, track donations, run festive drives, update beneficiaries.          |
+| Beneficiaries | Receive support, provide updates, connect transparently with donors.                         |
+| Admin         | Manage setup, security, permissions, and ensure compliance.                                  |
+
+---
+
+## Business Process Mapping
+
+### Current Manual Process
+
+* Donations recorded in Excel.  
+* Donors informed via manual email/WhatsApp.  
+* Reports created monthly with delays.  
+* No systematic loyalty/reward tracking.  
+
+### Proposed Salesforce Process
+
+1. Donor selects multiple campaigns → added to **Impact Cart**.  
+2. Total donation auto-calculates → stored as Donation record(s).  
+3. **Thank-you email** sent automatically.  
+4. Recurring reminders + festive campaign appeals triggered by Flow.  
+5. Donor earns **Loyalty Points** → when thresholds met, **Badges auto-assigned**.  
+6. **Impact Forecasting** shows how future pledges translate into meals/benefits.  
+7. Dashboards auto-refresh to show real-time donor & campaign performance.  
+
+---
+
+## Industry-Specific Use Cases
+
+* **Smart Donor Cart** → e-commerce-like donation experience.  
+* **Donation Transparency Dashboard** → live usage of funds.  
+* **Gamification with Loyalty Points & Badges** → motivates donors.  
+* **Impact Forecasting** → future impact visualization.  
+* **Festive Campaign Triggers** → seasonal drives like “This Diwali, sponsor a meal.”  
+
+---
+
+## AppExchange Exploration
+
+* **Nonprofit Success Pack (NPSP):** Base framework for NGO donation tracking.  
+* **Conga Composer:** Auto-generate donation receipts.  
+* **FormAssembly:** Custom donor registration forms.  
+* **SurveyMonkey:** Collect donor feedback post-campaign.  
+
+---
+
+
