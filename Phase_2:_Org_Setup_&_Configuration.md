@@ -13,7 +13,7 @@
 
 * **Business Hours & Holidays**
 
-  * Standard business hours: Monday–Friday, 9 AM – 6 PM IST.
+  * Standard business hours: Monday–Friday, 9 AM – 6 PM IST; Saturday-Sunday, 10 AM - 3 PM.
   * Holidays configured: Diwali, Christmas, Independence Day.
 
 * **Fiscal Year Settings**
