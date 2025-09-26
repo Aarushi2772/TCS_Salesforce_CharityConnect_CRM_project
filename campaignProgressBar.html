@@ -1,0 +1,23 @@
+<template>
+    <lightning-card title="Campaign Progress" icon-name="standard:campaign">
+        <div class="slds-p-around_medium">
+            <template if:true={campaign}>
+                <div class="slds-m-bottom_small">
+                    <strong>{campaign.Name}</strong>
+                </div>
+                <div class="slds-m-bottom_small">
+                    <lightning-progress-bar value={percentComplete} variant="success"></lightning-progress-bar>
+                </div>
+                <div class="slds-text-small">
+                    Raised: ₹{campaign.Amount_Raised__c} / Goal: ₹{campaign.Goal__c} ({percentComplete}%)
+                </div>
+            </template>
+            <template if:true={isLoading}>
+                <lightning-spinner alternative-text="Loading"></lightning-spinner>
+            </template>
+            <template if:true={error}>
+                <div class="slds-text-color_error">{error}</div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

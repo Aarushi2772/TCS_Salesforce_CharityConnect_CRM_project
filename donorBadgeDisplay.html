@@ -1,0 +1,33 @@
+<template>
+    <lightning-card title="Badges & Loyalty" icon-name="custom:custom63">
+        <div class="slds-p-around_medium">
+            <template if:true={badgeInfo}>
+                <div class="slds-grid slds-grid_align-spread slds-m-bottom_small">
+                    <div><strong>Loyalty Points:</strong> {badgeInfo.loyaltyPoints}</div>
+                    <div><strong>Next Milestone:</strong> {badgeInfo.nextMilestone} pts</div>
+                </div>
+
+                <div class="slds-m-bottom_small">
+                    <lightning-progress-bar value={progressPercent} variant="default"></lightning-progress-bar>
+                    <div class="slds-text-align_center slds-m-top_x-small">{progressPercent}% to milestone</div>
+                </div>
+
+                <div class="slds-m-top_small">
+                    <template for:each={badgeInfo.badges} for:item="b">
+                        <div key={b.Id} class="slds-box slds-m-bottom_x-small">
+                            <strong>{b.Badge_Type__c}</strong> • Earned: {b.Earned_Date__c}
+                        </div>
+                    </template>
+                </div>
+            </template>
+
+            <template if:true={isLoading}>
+                <div class="slds-text-align_center"><lightning-spinner alternative-text="Loading"></lightning-spinner></div>
+            </template>
+
+            <template if:true={error}>
+                <div class="slds-text-color_error">{error}</div>
+            </template>
+        </div>
+    </lightning-card>
+</template>
